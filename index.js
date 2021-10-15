@@ -20,9 +20,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/hellos', async (req, res) => {
-    const client = await getClient();
     try {
-        res.json(await client.invoke('ciao:quantiSaluti'));
+        const client = await getClient();
+        let data = await client.invoke('ciao:quantiSaluti')
+        ret_json = JSON.parse(JSON.stringify(data))
+        res.json(ret_json.numeroDiSaluti);
     }
     catch (err) {
         res.send(err);
