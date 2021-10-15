@@ -10,7 +10,7 @@ let clientCache;
 
 const getClient = async () => {
     if (!clientCache) {
-        clientCache = await apiClient.createWSClient('ws://192.168.1.74:8088/ws');
+        clientCache = await apiClient.createWSClient('ws://localhost:8088/ws');
     }
     return clientCache;
 };

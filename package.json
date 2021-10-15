@@ -4,7 +4,8 @@
   "description": "REST proxy to a Lisk Application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,6 @@
   "homepage": "https://github.com/PaolMon/express2lisk-proxy#readme",
   "dependencies": {
     "@liskhq/lisk-client": "^5.2.0",
-    "express": "^4.17.1",
-    "lisk-sdk": "^5.2.0"
+    "express": "^4.17.1"
   }
 }
