@@ -1,0 +1,26 @@
+{
+  "name": "express-proxy-lisk",
+  "version": "1.0.0",
+  "description": "REST proxy to a Lisk Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaolMon/express2lisk-proxy.git"
+  },
+  "keywords": [
+    "express",
+    "lisk",
+    "REST",
+    "HTTP",
+    "API"
+  ],
+  "author": "Paolo Monteverdi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaolMon/express2lisk-proxy/issues"
+  },
+  "homepage": "https://github.com/PaolMon/express2lisk-proxy#readme"
+}
