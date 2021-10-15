@@ -10,7 +10,7 @@ let clientCache;
 
 const getClient = async () => {
     if (!clientCache) {
-        clientCache = await apiClient.createWSClient('ws://localhost:8088/ws');
+        clientCache = await apiClient.createWSClient('ws://localhost:8080/ws');
     }
     return clientCache;
 };
@@ -19,9 +19,14 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/hellos', (req, res) => {
-    const client = getClient();
-    res.send(client.invoke('ciao:amountOfHellos'))
+app.get('/hellos', async (req, res) => {
+    const client = await getClient();
+    try {
+        res.json(client.invoke('ciao:quantiSaluti'));
+    }
+    catch (err) {
+        res.send(err);
+    }
 })
 
 app.listen(port, () => {
