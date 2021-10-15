@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 app.get('/hellos', async (req, res) => {
     const client = await getClient();
     try {
-        res.json(client.invoke('ciao:quantiSaluti'));
+        res.json(await client.invoke('ciao:quantiSaluti'));
     }
     catch (err) {
         res.send(err);
